@@ -6,5 +6,5 @@ const KAFKABROKER = "broke:9092"
 
 func ConnectToBroker() {
 	fmt.Println(KAFKABROKER)
-	fmt.Println("go lib test v1")
+	fmt.Println("go lib test v2")
 }
