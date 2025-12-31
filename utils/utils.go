@@ -1,7 +1,15 @@
 package utils
 
-import kfk "github.com/segmentio/kafka-go"
+import (
+	"log"
+
+	kfk "github.com/segmentio/kafka-go"
+)
 
 func ConnectToKafka() {
-	kfk.Dial("tcp", "localhost:9092")
+	_, err := kfk.Dial("tcp", "localhost:9092")
+	if err != nil {
+		log.Println(err)
+	}
+
 }
